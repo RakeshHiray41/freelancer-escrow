@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@import "@fontsource-variable/manrope";
+
+@theme {
+  --font-sans: "Manrope Variable", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-50: #effaf8;
+  --color-brand-100: #d3f3ee;
+  --color-brand-200: #a8e6dc;
+  --color-brand-500: #159a8b;
+  --color-brand-600: #0d7f73;
+  --color-brand-700: #0b6a61;
+  --color-brand-800: #0c5650;
+  --color-brand-900: #0b3f3b;
+  --color-hold-50: #fff8e6;
+  --color-hold-100: #feefc3;
+  --color-hold-600: #b45309;
+}
+
+html { scroll-behavior: smooth; }
+body { background: #f6f8fa; color: #0f172a; font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+
+:focus-visible { outline: 2px solid var(--color-brand-600); outline-offset: 2px; border-radius: 6px; }
+
+@keyframes fill { from { width: 0; } }
+.progress-fill { animation: fill 1.4s cubic-bezier(.2,.7,.2,1) .3s backwards; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
